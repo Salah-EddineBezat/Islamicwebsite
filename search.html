@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadith Search</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            padding-top: 50px;
+        }
+
+        .header-section12 {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+        }
+
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        #searchInput:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #007bff;
+        }
+
+        .card-body p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .card-body p strong {
+            color: #007bff;
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer .col-lg-4 {
+            margin-bottom: 20px;
+        }
+
+        .footer .col-lg-4 h5 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .footer .col-lg-4 p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="container">
+        <nav class="nav-bar navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Moslimhaat Educatie</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="initiatief.html">Initiatief</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="informatie.html">Informatie</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quiz.html">Quiz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/search.html">Search-feature!</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Search Section -->
+        <div class="search-container mt-4">
+            <h1 class="text-center mb-4">Hadith Search</h1>
+            <input type="text" id="searchInput" placeholder="Zoek in Hadiths..." class="form-control">
+            <div id="searchResults"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Over Ons -->
+                <div class="col-lg-4">
+                    <h5>Over Ons</h5>
+                    <p>Wij bieden een beter perspectief van wie moslims zijn en proberen ervoor te zorgen voor
+                        saamhorigheid en zijn niet uit tot haat.</p>
+                </div>
+
+                <!-- Snelle Links -->
+                <div class="col-lg-4">
+                    <h5>Snelle Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="initiatief.html">Initiatief</a></li>
+                        <li><a href="informatie.html">Informatie</a></li>
+                        <li><a href="privacy.html">Privacybeleid</a></li>
+                        <li><a href="quiz.html">Quiz</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-4">
+                    <h5>Contact</h5>
+                    <p>
+                        <i class="fas fa-envelope"></i> salaheddinealayubi@gmail.com<br>
+                        <i class="fas fa-map-marker-alt"></i> Rotterdam
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-secondary py-2 mt-3">
+            <p class="mb-0">&copy; 2024 Alle rechten voorbehouden: <a href="rechten.html">Rechten</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
